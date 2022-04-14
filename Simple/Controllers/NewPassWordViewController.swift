@@ -139,7 +139,7 @@ class NewPassWordViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.backButtonTitle = ""
-        if let navBar = navigationController?.navigationBar as? MyNavC {
+        if let navBar = navigationController?.navigationBar as? GeneralNavigationBar {
             navBar.backLabel.text = "Изменить пароль"
         }
     }
@@ -212,7 +212,7 @@ class NewPassWordViewController: UIViewController {
     @objc func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
                 let height = keyboardSize.height
-                self.saveButton.frame.origin.y += height            
+                self.saveButton.frame.origin.y += height
         }
     }
     

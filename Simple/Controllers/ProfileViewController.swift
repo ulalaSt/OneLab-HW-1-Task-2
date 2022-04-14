@@ -84,7 +84,7 @@ class ProfileViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.backButtonTitle = ""
-        if let navBar = navigationController?.navigationBar as? MyNavC {
+        if let navBar = navigationController?.navigationBar as? GeneralNavigationBar {
             navBar.backLabel.text = "Профиль"
         }
     }

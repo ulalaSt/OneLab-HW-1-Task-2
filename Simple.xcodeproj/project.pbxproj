@@ -21,6 +21,7 @@
 		CEB2799928059E0F005F73A5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2799828059E0F005F73A5 /* MainViewController.swift */; };
 		CEB2799B2805AB84005F73A5 /* NewPassWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2799A2805AB84005F73A5 /* NewPassWordViewController.swift */; };
 		CEB2799D2805B116005F73A5 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEB2799C2805B116005F73A5 /* Montserrat-Medium.ttf */; };
+		CEB279A42806FFF9005F73A5 /* GeneralNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB279A32806FFF9005F73A5 /* GeneralNavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		CEB2799828059E0F005F73A5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CEB2799A2805AB84005F73A5 /* NewPassWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPassWordViewController.swift; sourceTree = "<group>"; };
 		CEB2799C2805B116005F73A5 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		CEB279A32806FFF9005F73A5 /* GeneralNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralNavigationBar.swift; sourceTree = "<group>"; };
 		D3543524F80A6353973479EB /* Pods_Simple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C136DFBA573AE05A754D8E /* Pods-Simple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple.release.xcconfig"; path = "Target Support Files/Pods-Simple/Pods-Simple.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,20 +98,69 @@
 			children = (
 				CEB279762804A455005F73A5 /* AppDelegate.swift */,
 				CEB279782804A455005F73A5 /* SceneDelegate.swift */,
-				CEB2799828059E0F005F73A5 /* MainViewController.swift */,
-				CEB2797A2804A455005F73A5 /* ProfileViewController.swift */,
-				CEB2799A2805AB84005F73A5 /* NewPassWordViewController.swift */,
-				CEB279902804C1E2005F73A5 /* ProfileModel.swift */,
-				CEB279922804C1F0005F73A5 /* ProfileViewModel.swift */,
-				CEB279942804C258005F73A5 /* GeneralTableViewCell.swift */,
-				CEB279962805742D005F73A5 /* Montserrat-Regular.ttf */,
-				CEB2799C2805B116005F73A5 /* Montserrat-Medium.ttf */,
-				CEB2798E2804A5D4005F73A5 /* Montserrat-SemiBold.ttf */,
+				CEB2799E2806FC33005F73A5 /* Controllers */,
+				CEB2799F2806FC56005F73A5 /* Models */,
+				CEB279A02806FC5E005F73A5 /* ViewModels */,
+				CEB279A12806FC6B005F73A5 /* Custom Cells */,
+				CEB279A52807034B005F73A5 /* Custom NavigationBar */,
+				CEB279A22806FC78005F73A5 /* Fonts */,
 				CEB2797F2804A458005F73A5 /* Assets.xcassets */,
 				CEB279812804A458005F73A5 /* LaunchScreen.storyboard */,
 				CEB279842804A458005F73A5 /* Info.plist */,
 			);
 			path = Simple;
+			sourceTree = "<group>";
+		};
+		CEB2799E2806FC33005F73A5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEB2799828059E0F005F73A5 /* MainViewController.swift */,
+				CEB2797A2804A455005F73A5 /* ProfileViewController.swift */,
+				CEB2799A2805AB84005F73A5 /* NewPassWordViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CEB2799F2806FC56005F73A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEB279902804C1E2005F73A5 /* ProfileModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEB279A02806FC5E005F73A5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CEB279922804C1F0005F73A5 /* ProfileViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CEB279A12806FC6B005F73A5 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CEB279942804C258005F73A5 /* GeneralTableViewCell.swift */,
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		CEB279A22806FC78005F73A5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CEB279962805742D005F73A5 /* Montserrat-Regular.ttf */,
+				CEB2799C2805B116005F73A5 /* Montserrat-Medium.ttf */,
+				CEB2798E2804A5D4005F73A5 /* Montserrat-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CEB279A52807034B005F73A5 /* Custom NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				CEB279A32806FFF9005F73A5 /* GeneralNavigationBar.swift */,
+			);
+			path = "Custom NavigationBar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +287,7 @@
 				CEB279932804C1F0005F73A5 /* ProfileViewModel.swift in Sources */,
 				CEB279792804A455005F73A5 /* SceneDelegate.swift in Sources */,
 				CEB2799B2805AB84005F73A5 /* NewPassWordViewController.swift in Sources */,
+				CEB279A42806FFF9005F73A5 /* GeneralNavigationBar.swift in Sources */,
 				CEB279912804C1E2005F73A5 /* ProfileModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

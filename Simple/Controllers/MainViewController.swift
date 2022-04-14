@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     }()
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.backButtonTitle = ""
-        if let navBar = navigationController?.navigationBar as? MyNavC {
+        if let navBar = navigationController?.navigationBar as? GeneralNavigationBar {
             navBar.backLabel.text = ""
         }
     }
@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(profButton)
         profButton.addTarget(self, action: #selector(profClicked), for: .touchUpInside)
-        // Do any additional setup after loading the view.
+        
         navigationController?.navigationBar.tintColor = UIColor(red: 0.178, green: 0.376, blue: 0.887, alpha: 1)
     }
     override func viewDidLayoutSubviews() {
@@ -36,15 +36,4 @@ class MainViewController: UIViewController {
         let profileVC = ProfileViewController()
         navigationController?.pushViewController(profileVC, animated: false)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

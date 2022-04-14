@@ -6,25 +6,6 @@
 //
 
 import UIKit
-class MyNavC: UINavigationBar {
-    public var backLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = UIColor(red: 0.217, green: 0.217, blue: 0.217, alpha: 1)
-        label.font = UIFont(name:"Montserrat-Medium", size: 18)
-        return label
-    }()
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        addSubview(backLabel)
-    }
-    override func layoutSubviews() {
-        backLabel.frame = CGRect(x: 90, y: 0, width: frame.width-90, height: frame.height)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -37,15 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
         let vC = MainViewController()
-        let navC = UINavigationController(navigationBarClass: MyNavC.self, toolbarClass: nil)
-        navC.title = "SAD"
-        
-        if let navBar = navC.navigationBar as? MyNavC {
-            navBar.backLabel.text = "jhg"
-        }
-        navC.pushViewController(vC, animated: false)
+        let navC = UINavigationController(navigationBarClass: GeneralNavigationBar.self, toolbarClass: nil)
         window?.rootViewController = navC
         window?.makeKeyAndVisible()
+        navC.pushViewController(vC, animated: false)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

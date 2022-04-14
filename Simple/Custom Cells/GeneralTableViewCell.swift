@@ -22,20 +22,24 @@ class GeneralTableViewCell: UITableViewCell {
     var switcher = UISwitch()
     
     func setUp(with model: ProfileModel) {
-        label.text = model.title
         contentView.addSubview(label)
+        label.text = model.title
+        
         label.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(20)
             make.height.equalToSuperview()
             make.top.equalToSuperview()
             make.width.equalToSuperview()
         }
+        
         switch model.viewModelType {
         case .info:
             accessoryType = .disclosureIndicator
+            
         case .switcher:
             contentView.addSubview(switcher)
             switcher.onTintColor = UIColor(red: 0.178, green: 0.376, blue: 0.887, alpha: 1)
+            
             switcher.snp.makeConstraints { make in
                 make.right.equalToSuperview().inset(20)
                 make.centerY.equalToSuperview()
