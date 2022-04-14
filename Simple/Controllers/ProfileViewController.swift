@@ -46,19 +46,20 @@ class ProfileViewController: UIViewController {
     }
     private func modifyHeader() {
         headerV.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 200)
-        headerV.addSubview(imageBG)
         headerV.addSubview(imageV)
-        headerV.addSubview(newImageV)
         imageV.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(20)
             make.centerX.equalToSuperview()
             make.size.equalTo(100)
         }
+        headerV.addSubview(imageBG)
+        
         imageBG.snp.makeConstraints { make in
             make.centerY.equalTo(imageV)
             make.centerX.equalTo(imageV)
             make.size.equalTo(102)
         }
+        headerV.addSubview(newImageV)
         newImageV.snp.makeConstraints { make in
             make.bottom.equalTo(imageV).inset(3)
             make.right.equalTo(imageV)
@@ -80,6 +81,7 @@ class ProfileViewController: UIViewController {
             make.top.equalTo(nameLabel.snp.bottom)
             make.centerX.equalToSuperview()
         }
+        
         tableView.tableHeaderView = headerV
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -90,20 +92,18 @@ class ProfileViewController: UIViewController {
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
         tableView.frame = view.frame
-
-        imageBG.layer.cornerRadius = imageBG.frame.width/2
+        
+        imageBG.layer.cornerRadius = 51
         imageBG.layer.borderColor = UIColor(red: 0.279, green: 0.279, blue: 0.279, alpha: 1).cgColor
         imageBG.layer.borderWidth = 3
         imageBG.layer.masksToBounds = true
 
-        imageV.layer.cornerRadius = imageV.frame.width/2
+        imageV.layer.cornerRadius = 50
         imageV.layer.borderColor = UIColor.white.cgColor
         imageV.layer.borderWidth = 3
         imageV.layer.masksToBounds = true
     }
-    
 }
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
